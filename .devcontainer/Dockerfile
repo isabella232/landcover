@@ -19,5 +19,5 @@ RUN if [ -f "/tmp/conda-tmp/environment_precise.yml" ]; then /opt/conda/bin/cond
 #     && pipx reinstall-all
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+     && apt-get -y install --no-install-recommends libgl1-mesa-glx
